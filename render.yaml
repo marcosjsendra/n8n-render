@@ -11,5 +11,5 @@ services:
       - key: DB_POSTGRESDB_CONNECTION_URL
         value: postgresql://neondb_owner:npg_qjkALd13tRhW@ep-misty-star-a5u45qgu-pooler.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
       - key: N8N_ENCRYPTION_KEY
-        value: npg_qjkALd13tRhW
+        value: C8wIIRYGEM
     port: 5678
