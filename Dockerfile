@@ -8,3 +8,6 @@ EXPOSE 5678
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=msendra.gdcr@gmail.com
 ENV N8N_BASIC_AUTH_PASSWORD=9432*Niki
+
+# Set the command to start n8n
+CMD ["n8n"]
