@@ -1,5 +1,8 @@
-# Use the official n8n Docker image as the base image
+# Use the official n8n image
 FROM n8nio/n8n:latest
+
+# Set the working directory
+WORKDIR /app
 
 # Expose the port n8n runs on
 EXPOSE 5678
@@ -9,5 +12,8 @@ ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=msendra.gdcr@gmail.com
 ENV N8N_BASIC_AUTH_PASSWORD=9432*Niki
 
-# Set the command to start n8n
+# Ensure the n8n binary is accessible
+RUN npm install -g n8n
+
+# Start n8n
 CMD ["n8n"]
