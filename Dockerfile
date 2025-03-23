@@ -12,8 +12,5 @@ ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=msendra.gdcr@gmail.com
 ENV N8N_BASIC_AUTH_PASSWORD=9432*Niki
 
-# Ensure the n8n binary is accessible
-RUN npm install -g n8n
-
 # Start n8n
 CMD ["n8n"]
