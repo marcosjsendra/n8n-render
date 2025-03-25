@@ -9,20 +9,8 @@ services:
     envVars:
       - key: DB_TYPE
         value: postgresdb
-      - key: DB_POSTGRESDB_DATABASE
-        value: n8ndbcr
-      - key: DB_POSTGRESDB_HOST
-        value: dpg-cvfgrc5ds78s73flnrq0-a.oregon-postgres.render.com
-      - key: DB_POSTGRESDB_PORT
-        value: "5432"
-      - key: DB_POSTGRESDB_USER
-        value: msn8nautomator
-      - key: DB_POSTGRESDB_PASSWORD
-        value: nu64SBTsydLSm14kSPZeeGRfQ650Lv2k
-      - key: DB_POSTGRESDB_SSL
-        value: "true"
-      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-        value: "false"
+      - key: DB_POSTGRESDB_CONNECTION_URL
+        value: postgres://msn8nautomator:nu64SBTsydLSm14kSPZeeGRfQ650Lv2k@dpg-cvfgrc5ds78s73flnrq0-a.oregon-postgres.render.com:5432/n8ndbcr?sslmode=require
       - key: N8N_ENCRYPTION_KEY
         value: C8wIIRYGEM
       - key: N8N_BASIC_AUTH_ACTIVE
@@ -31,4 +19,6 @@ services:
         value: msendra.gdcr@gmail.com
       - key: N8N_BASIC_AUTH_PASSWORD
         value: 9432*Niki
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
     port: 5678
