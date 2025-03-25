@@ -2,23 +2,14 @@ services:
   - type: web
     name: n8n
     runtime: docker
-    env: docker
     plan: free
     region: oregon
     dockerImage: n8nio/n8n:latest
     envVars:
-      - key: DB_TYPE
-        value: postgresdb
-      - key: DB_POSTGRESDB_CONNECTION_URL
-        value: postgres://msn8nautomator:nu64SBTsydLSm14kSPZeeGRfQ650Lv2k@dpg-cvfgrc5ds78s73flnrq0-a.oregon-postgres.render.com:5432/n8ndbcr?sslmode=require
-      - key: N8N_ENCRYPTION_KEY
-        value: C8wIIRYGEM
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: msendra.gdcr@gmail.com
       - key: N8N_BASIC_AUTH_PASSWORD
         value: 9432*Niki
-      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
-        value: "true"
     port: 5678
