@@ -6,10 +6,25 @@ services:
     region: oregon
     dockerImage: n8nio/n8n:latest
     envVars:
+      # Authentication
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: msendra.gdcr@gmail.com
       - key: N8N_BASIC_AUTH_PASSWORD
         value: 9432*Niki
+      
+      # Base Configuration
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-igx6.onrender.com/
+      
+      # Security
+      - key: N8N_ENCRYPTION_KEY
+        value: C8wIIRYGEM
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
+      
+      # Performance
+      - key: N8N_RUNNERS_ENABLED
+        value: "true"
     port: 5678
